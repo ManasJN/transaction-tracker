@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .transaction-list, #total {
+            margin-top: 20px;
+        }
+        .transaction-item {
+            padding: 10px;
+            background: #fff;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transaction Tracker</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Add a Transaction</h2>
+            <form id="transaction-form">
+                <label for="friend-name">Friend's Name</label>
+                <input type="text" id="friend-name" placeholder="Enter friend's name" required>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" required>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+
+                <label for="note">Note</label>
+                <input type="text" id="note" placeholder="Optional">
+
+                <button type="submit">Add Transaction</button>
+            </form>
+
+            <div class="transaction-list" id="transaction-list">
+                <h3>Transaction History</h3>
+                <p>No transactions yet.</p>
+            </div>
+
+            <div id="total">
+                <h3>Total Amounts:</h3>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
